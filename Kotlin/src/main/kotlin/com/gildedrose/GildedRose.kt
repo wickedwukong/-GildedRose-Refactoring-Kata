@@ -9,7 +9,6 @@ class GildedRose(var items: Array<Item>) {
 
 }
 
-val x: (Item) -> Unit = Item::update
 fun Item.update() {
     fun decrementQuality(item:Item, byAmount:Int = 1){
         item.quality = item.quality - byAmount
