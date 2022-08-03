@@ -9,7 +9,8 @@ class GildedRose(var items: Array<Item>) {
 
 }
 
-private fun Item.update() {
+val x: (Item) -> Unit = Item::update
+fun Item.update() {
     fun decrementQuality(item:Item, byAmount:Int = 1){
         item.quality = item.quality - byAmount
     }
@@ -69,4 +70,8 @@ private fun Item.update() {
     }
 
 }
+
+fun Brie(sellIn: Int, quality: Int) : Item = Item("Aged Brie", sellIn, quality, updater = Item::update)
+fun Sulfuras(sellIn: Int, quality: Int) : Item = Item("Sulfuras", sellIn, quality, updater = Item::update)
+fun Pass(sellIn: Int, quality: Int) : Item = Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality, updater = Item::update)
 
