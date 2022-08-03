@@ -71,6 +71,6 @@ fun Item.update() {
 }
 
 fun Brie(sellIn: Int, quality: Int) : Item = Item("Aged Brie", sellIn, quality, updater = Item::update)
-fun Sulfuras(sellIn: Int, quality: Int) : Item = Item("Sulfuras", sellIn, quality, updater = Item::update)
+fun Sulfuras(sellIn: Int, quality: Int) : Item = Item("Sulfuras, Hand of Ragnaros", sellIn, quality, updater = Item::update)
 fun Pass(sellIn: Int, quality: Int) : Item = Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality, updater = Item::update)
 
